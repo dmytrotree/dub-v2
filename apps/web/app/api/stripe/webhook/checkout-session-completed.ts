@@ -120,14 +120,14 @@ export async function checkoutSessionCompleted(event: Stripe.Event) {
       },
     }),
     // enable dub.link premium default domain for the workspace
-    prisma.defaultDomains.update({
-      where: {
-        projectId: workspaceId,
-      },
-      data: {
-        dublink: true,
-      },
-    }),
+    // prisma.defaultDomains.update({
+    //   where: {
+    //     projectId: workspaceId,
+    //   },
+    //   data: {
+    //     dublink: true,
+    //   },
+    // }),
   ]);
 }
 
